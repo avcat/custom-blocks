@@ -1,0 +1,44 @@
+.cb-cta-link {
+  padding-block: 86px;
+  text-align: center;
+  color: var(--tx-light-primary);
+  background-color: var(--accent-primary);
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  & .title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-heading-4);
+  }
+
+  & .link {
+    padding: 9px 36px;
+    border: 1px solid currentColor;
+
+    &:hover {
+      background-color: var(--bg-light-primary-1);
+      color: var(--accent-primary);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    & .container {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding-block: 40px;
+    }
+
+    & .title {
+      font-size: var(--fs-primary-larger-22);
+    }
+  }
+}

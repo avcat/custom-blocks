@@ -1,0 +1,31 @@
+.cb-company-statistics {
+  padding-block: 60px;
+  text-align: center;
+
+  & .statistic-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 1em;
+  }
+
+  & .statistic-item {
+    color: var(--tx-dark-primary-1);
+    max-width: 240px;
+  }
+
+  & .how-many {
+    font-size: var(--fs-heading-3);
+    font-weight: 600;
+  }
+
+  & .of-what {
+    font-weight: 300; 
+  }
+
+  @media (max-width: 768px) {
+    & .statistic-items {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

@@ -1,0 +1,37 @@
+html :where(.wp-block) {
+  max-width: 90%;
+}
+
+html :where(.editor-styles-wrapper) a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+li {
+  list-style: none;
+  display: block;
+}
+
+svg {
+  max-width: 100px;
+}
+
+:is(.acf-table td) {
+  font-size: 13px !important;
+}
+
+:where(.container) {
+  margin: 0 auto;
+  max-width: 90%;
+}
+
+.subtitle {
+  padding: initial;
+  color: inherit;
+  font: initial;
+}
+
+.block-editor-block-list__layout > .block-editor-block-list__block:nth-of-type(even) {
+  background-color: var(--bg-light-primary-2);
+}

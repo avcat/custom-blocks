@@ -1,0 +1,28 @@
+.cb-icon-title-subtitle {
+  font-family: var(--ff-primary);
+  padding-block: 90px;
+
+  &.alignment-center {
+    text-align: center;
+  }
+
+  &.alignment-right {
+    text-align: right;
+  }
+
+  & .icon {
+    max-width: 100%;
+  }
+
+  & .title {
+    margin: var(--fs-primary) 0 0;
+    font-size: var(--fs-heading-1);
+    font-weight: 500;
+  }
+
+  & .subtitle {
+    margin-top: var(--fs-primary-larger-2);
+    font-size: var(--fs-primary-larger-2);
+    font-weight: 300;
+  }
+}

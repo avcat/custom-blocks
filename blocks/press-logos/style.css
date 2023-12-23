@@ -1,0 +1,64 @@
+.cb-press-logos {
+  padding-block: 20px;
+
+  &:has(&[data-coloring="light"]) {
+    background-color: var(--bg-dark-primary-1);
+  }
+  
+  & .title {
+    font: var(--fs-primary-larger-3) var(--ff-secondary);
+    color: var(--tx-light-primary);
+    margin-bottom: 20px;
+    padding-right: 1em;
+  }
+
+  & .publications {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    &[data-coloring="light"] .publisher-logo {
+      filter: brightness(0) invert(1);
+    }
+
+    &[data-coloring="dark"] .publisher-logo {
+      filter: brightness(2) grayscale(1) invert(1);
+    }
+  }
+
+  & .publication {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5em;
+  }
+
+  & .publication-link {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & .publisher-logo {
+    max-width: 150px;
+    max-height: 50px;
+  }
+
+  @media (max-width: 1024px) {
+    & {
+      padding-block: 40px;
+    }
+
+    & .publications {
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+      align-items: initial;
+    }
+
+    & .publication {
+      border: 1px solid var(--bg-light-primary-1);
+      margin-bottom: -1px;
+      margin-left: -1px;
+    }
+  }
+}

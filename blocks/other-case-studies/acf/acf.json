@@ -1,0 +1,155 @@
+{
+  "key": "group_652994f4595dd",
+  "title": "Other Case Studies",
+  "fields": [
+      {
+          "key": "field_652994f47c463",
+          "label": "Other Case Studies",
+          "name": "fields",
+          "aria-label": "",
+          "type": "group",
+          "instructions": "",
+          "required": 0,
+          "conditional_logic": 0,
+          "wrapper": {
+              "width": "",
+              "class": "",
+              "id": ""
+          },
+          "layout": "block",
+          "sub_fields": [
+              {
+                  "key": "field_652995047c464",
+                  "label": "Title",
+                  "name": "title",
+                  "aria-label": "",
+                  "type": "text",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": "Other Case Studies",
+                  "maxlength": "",
+                  "placeholder": "",
+                  "prepend": "",
+                  "append": ""
+              },
+              {
+                  "key": "field_6529950a7c465",
+                  "label": "Is Slider",
+                  "name": "is_slider",
+                  "aria-label": "",
+                  "type": "true_false",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "33",
+                      "class": "",
+                      "id": ""
+                  },
+                  "message": "",
+                  "default_value": 0,
+                  "ui_on_text": "",
+                  "ui_off_text": "",
+                  "ui": 1
+              },
+              {
+                  "key": "field_6529953c7c466",
+                  "label": "Amount to Display",
+                  "name": "amount_to_display",
+                  "aria-label": "",
+                  "type": "number",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "33",
+                      "class": "",
+                      "id": ""
+                  },
+                  "default_value": 3,
+                  "min": 1,
+                  "max": "",
+                  "placeholder": "",
+                  "step": "",
+                  "prepend": "",
+                  "append": ""
+              },
+              {
+                  "key": "field_652995617c467",
+                  "label": "Choose Case Studies Manually",
+                  "name": "choose_case_studies_manually",
+                  "aria-label": "",
+                  "type": "true_false",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": 0,
+                  "wrapper": {
+                      "width": "33",
+                      "class": "",
+                      "id": ""
+                  },
+                  "message": "",
+                  "default_value": 0,
+                  "ui_on_text": "",
+                  "ui_off_text": "",
+                  "ui": 1
+              },
+              {
+                  "key": "field_6529957c7c468",
+                  "label": "Case Studies",
+                  "name": "case_studies",
+                  "aria-label": "",
+                  "type": "post_object",
+                  "instructions": "",
+                  "required": 0,
+                  "conditional_logic": [
+                      [
+                          {
+                              "field": "field_652995617c467",
+                              "operator": "==",
+                              "value": "1"
+                          }
+                      ]
+                  ],
+                  "wrapper": {
+                      "width": "",
+                      "class": "",
+                      "id": ""
+                  },
+                  "post_type": [
+                      "case_study"
+                  ],
+                  "taxonomy": "",
+                  "return_format": "object",
+                  "multiple": 1,
+                  "allow_null": 0,
+                  "ui": 1
+              }
+          ]
+      }
+  ],
+  "location": [
+      [
+          {
+              "param": "block",
+              "operator": "==",
+              "value": "acf\/other-case-studies"
+          }
+      ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

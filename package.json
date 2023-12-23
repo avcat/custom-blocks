@@ -1,0 +1,12 @@
+{
+  "name": "compile-scss",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "sass blocks --no-source-map",
+    "watch": "sass blocks --no-source-map --error-css --watch",
+    "prod": "sass blocks --no-source-map --style=compressed"
+  },
+  "devDependencies": {
+    "sass": "^1.22.12"
+  }
+}

@@ -1,0 +1,28 @@
+.cb-cta-socials {
+  padding-block: 60px;
+  text-align: center;
+  color: var(--tx-light-primary);
+  background-color: var(--accent-primary);
+
+  & .title {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-heading-4);
+  }
+
+  & .socials_items {
+    justify-content: center;
+    gap: 12px;
+    color: var(--accent-primary);
+    --size: 65px;
+    --icon-size: 25px;
+  }
+
+  & .socials_link {
+    background-color: var(--bg-light-primary-1);
+
+    &:hover, &:focus {
+      color: var(--bg-light-primary-1);
+      background-color: var(--accent-primaryy);
+    }
+  }
+}
