@@ -1,0 +1,7 @@
+{
+  "name": "avcat/custom-blocks",
+  "type": "wordpress-plugin",
+  "require": {
+    "php": ">=7.4"
+  }
+}
