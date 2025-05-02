@@ -1,11 +1,13 @@
 <?php
 
-// https://wp-kama.ru/note/kak-sozdat-shablon-stranitsy-iz-plagina-chtoby-poyavilsya-vybor-v-atributah-stranitsy
+// Register custom template for CB_TEMPLATE_POST_TYPES
 
-add_filter('theme_page_templates', function ($templates) {
-    $templates['template-custom-blocks.php'] = 'Custom Blocks';
-    return $templates;
-});
+add_filter('theme_templates', function ($post_templates, $wp_theme, $post, $post_type) {
+    if (in_array($post_type, CB_TEMPLATE_POST_TYPES)) {
+        $post_templates['template-custom-blocks.php'] = 'Custom Blocks';
+    }
+    return $post_templates;
+}, 10, 4);
 
 add_filter('template_include', function ($template) {
     $page_template = get_page_template_slug();

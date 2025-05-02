@@ -1,13 +1,12 @@
 <?php
 
-function custom_blocks_category($categories, $post) {
+add_filter('block_categories_all', function($categories, $post) {
     array_unshift($categories, [
         'slug' => 'custom_blocks',
         'title' => 'Custom Blocks',
     ]);
     return $categories;
-}
-add_filter('block_categories_all', 'custom_blocks_category', 10, 2);
+}, 10, 2);
 
 class My_Blocks {
     public function init_acf_blocks(): void {

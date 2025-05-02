@@ -6,7 +6,7 @@
  * Description: Adds ACF Blocks to use as new Template Builder system.
  * Author:      Arkadii Vodolazskyi
  * Author URI:  https://gitlab.com/avcat
- * Version:     2.1.0
+ * Version:     3.0.0
  */
 
 define('CB_URL', plugin_dir_url(__FILE__));
@@ -35,6 +35,11 @@ const BLOCK_GENERAL_SETTINGS = [
     ]
 ];
 
+const CB_TEMPLATE_POST_TYPES = [
+    'page',
+    'post',
+];
+
 include_once 'inc/helpers.php';
 include_once 'inc/custom-render-block.php';
 include_once 'inc/register-acf-blocks.php';
@@ -42,4 +47,3 @@ include_once 'inc/register-page-template.php';
 include_once 'inc/register-admin-styles.php';
 include_once 'inc/template-helpers.php';
 include_once 'inc/acf-general.php';
-include_once 'inc/translations.php';

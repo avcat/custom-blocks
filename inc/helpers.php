@@ -7,7 +7,7 @@ function block_name_remove_namespace($block) {
     return $cb_block_name;
 }
 
-function get_block_asset_url($block, $asset_name) {
+function cb_get_block_asset_url($block, $asset_name) {
     $block_asset_url = false;
     $cb_block_name = block_name_remove_namespace($block);
     $block_dir = $block['path'];
@@ -53,7 +53,7 @@ function block_render_template($block, $context, $is_preview, $block_render_func
     $block_render_function(block_include_params($block), $context, $is_preview);
 
     if ($is_preview) {
-        $block_script_url = get_block_asset_url($block, 'script.js');
+        $block_script_url = cb_get_block_asset_url($block, 'script.js');
         if ($block_script_url) {
             $script_contents = file_get_contents($block_dir . '/script.js');
             echo '<script>' . $script_contents . '</script>';
@@ -145,22 +145,6 @@ function cb_output_css_js_front() {
     wp_enqueue_script('global-blocks-js');
     global $blocks_js_combined;
     do_action('cb_enqueue_scripts', $blocks_js_combined);
-}
-
-function rbtr($string) {
-    $language_domain = 'EN';
-
-    if (defined('RW_LNG')) {
-        $language_domain = RW_LNG;
-    } else if (defined('QW_LNG')) {
-        $language_domain = QW_LNG;
-    }
-
-    if ($language_domain === 'EN') {
-        return $string;
-    }
-
-    return RBTR[$string][$language_domain];
 }
 
 function cb_add_footer_styles($footer_content) {

@@ -79,13 +79,6 @@
     border: none;
   }
 
-  & .container::before,
-  & .container::after {
-    content: unset;
-  }
-
-  /* TODO:: create general classes/types/components for buttons */
-
   /* Slick */
 
   .slick-slide {
@@ -117,71 +110,4 @@
     margin-bottom: 0;
     padding-bottom: 30px;
   }
-
-  /* Socials Items */
-
-  & :where(.socials_items) {
-    --size: 40px;
-    --icon-size: 20px;
-    margin-top: var(--fs-primary-larger-2);
-    display: flex;
-    gap: 8px;
-    color: var(--tx-light-primary);
-
-    & :where(.socials_link) {
-      align-items: center;
-      justify-content: center;
-      border: 1px solid currentColor;
-      width: var(--size);
-      height: var(--size);
-
-      &:hover,
-      &:focus {
-        color: var(--accent-primary);
-        background-color: var(--tx-light-primary);
-      }
-    }
-
-    & :where(.socials_icon) {
-      max-width: var(--icon-size);
-      max-height: var(--icon-size);
-    }
-  }
-
-  & button[data-video-id] {
-    font-size: 4em;
-    width: 1em;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    aspect-ratio: 1;
-    background-color: #000;
-    border-radius: 50%;
-    transition: opacity 0.3s;
-    opacity: 0.72;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &:before {
-      font-size: 0.17em;
-      content: '';
-      display: inline-block;
-      border-style: solid;
-      border-color: var(--tsp) var(--tsp) var(--tsp) var(--bg-light-primary-1);
-      border-width: 1em 0 1em 1.3em;
-      margin-left: 0.4em;
-    }
-  }
-
-  & [data-clamp-lines] {
-    display: -webkit-box;
-    -webkit-line-clamp: var(--clamp-lines, 2);
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
 }

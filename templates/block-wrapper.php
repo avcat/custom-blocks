@@ -11,12 +11,12 @@
     }
 
     $wrapper_element = 'section';
-    if ($block['title'] === 'Footer') {
-        $wrapper_element = 'footer';
-    }
 ?>
 
-<<?= $wrapper_element ?> class="<?= $class_names; ?>">
+<<?= $wrapper_element ?> 
+    class="<?= $class_names; ?>"
+    data-block="<?= $block['description']; ?>"
+>
 
     <?php block_render_template_front($block, $fields); ?>
 
